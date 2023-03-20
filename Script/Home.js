@@ -1,23 +1,15 @@
-let empPayrollList;
 window.addEventListener("DOMContentLoaded", (event) => {
-    empPayrollList=getEmployeePayrollDataFromStorage();
-    document.querySelector('.emp-count').textContent=empPayrollList.length;
     createInnerHtml();
 });
 
-const getEmployeePayrollDataFromStorage = () =>{
-    return localStorage.getItem('EmployeePayrollList')?
-    JSON.parse(localStorage.getItem('EmployeePayrollList')):[];
-}
-
 //Template literal ES6 feature
 const createInnerHtml = () => {
-    if(empPayrollList==0) return;
     const headerHtml = "<tr><th></th><th>Name</th><th>Gender</th><th>Department</th><th>Salary</th>" +
         "<th>Start Date</th><th>Actions</th></tr>"
    
     
     let innerHtml = `${headerHtml}`;
+    let empPayrollList = createEmployeePayrollJSON();
     for(const empPayrollData of empPayrollList){
         innerHtml=`${innerHtml}
             <tr>
@@ -34,9 +26,9 @@ const createInnerHtml = () => {
             </tr>
     `;
     }
+    
     document.querySelector('#table-display').innerHTML = innerHtml;
 }
-
 const createEmployeePayrollJSON = () => {
     let empPayrollListLocal = [{
             _name: 'Narayan Mahadevan',
@@ -49,7 +41,7 @@ const createEmployeePayrollJSON = () => {
             _startDate: '29 Oct 2019',
             _note: '',
             _id: new Date().getTime(),
-            _profilePic: "assets\images\Eclipse-2.PNG"
+            _profilePic: "Assets\images\Eclipse-2.PNG"
         },
         {
             _name: 'Aparna Shashanka Keerthi Kumar',
