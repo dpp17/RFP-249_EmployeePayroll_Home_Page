@@ -1,0 +1,185 @@
+.form-content{
+    padding: 1%;
+    min-height: calc(100% - 80px);
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+    
+}
+
+input[type=radio] {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.2);
+}
+
+.form{
+    width: 65%;
+    padding: 44px 60px;
+    background-color: #ffffff;
+    box-shadow: opx 3px 6px #615d5d29;
+    border: 1px solid #f5f5f5;
+    border-radius: 8px;
+    opacity: 1;
+    box-shadow: 0 4px 8px 0 rgba(68, 68, 68, 0.2), 0 6px 20px 0 rgba(140, 140, 140, 0.19);
+}
+
+.form-head{
+    font: normal normal bold 24px/37px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    text-transform: capitalize;
+    opacity: 1;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.row-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 0px solid green;
+}
+
+.label{
+    min-width: 140px;
+}
+
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.text{
+    font-size: 15px;
+    color: #42515f;
+    opacity: 1;
+    font-family: Roboto;
+    /* padding: 1px; */
+}
+
+.input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.profile-radio-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-radio-content > label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile{
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+select{
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent;
+}
+
+.buttonParent{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20PX;
+}
+
+.button{
+    font-size: 20px;
+    font-family: Roboto;
+    letter-spacing: 0px;
+    color: #424242;
+    opacity: 1;
+    background: transparent;
+    background-color: #c9c6c6;
+    border: none;
+    font-weight: 400;
+    min-width: 140px;
+    padding: 7px 7px;
+    border: 1px solid #a9a8a8;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submitButton{
+    background-color: #c9c6c6;
+    margin-right: 30px;
+}
+
+.cancelButton{
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover{
+    -webkit-text-fill-color: #ffffff;
+    background-color: #707070;
+}
+
+.submitButton:hover{
+    background-color: #82A70C;
+}
+
+input[type="radio"] {
+  
+    border-color: red;
+    
+    
+    background-color: red;
+    
+    
+    color: red;
+  }
+@media only screen and (max-width: 960px){
+
+    .cancelButton{
+        margin-left: 0px;
+    }
+    .form{
+        width: 85%;
+        padding: 44px 20px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+.form{
+    margin-top: 10px;
+}
+.row{
+    flex-direction: column;
+}
+.uploadButton{
+    justify-content: flex-start;
+}
+.profile-radio-button{
+    flex-flow: wrap;
+}
+.submitButton{
+    margin: 0;
+}
+.buttonParent{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+}
+
